@@ -1,0 +1,42 @@
+{
+  "info": {
+    "name": "API de Eventos - Cadastro e consulta",
+    "description": "Requisições prontas para a API Flask na porta 5000. Inicie o servidor e envie Cadastrar evento; depois envie Listar eventos.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cadastrar evento",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Encontro Flask\",\n  \"data\": \"2026-12-05\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://127.0.0.1:5000/eventos"
+      },
+      "response": []
+    },
+    {
+      "name": "Listar eventos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:5000/eventos"
+      },
+      "response": []
+    }
+  ]
+}
